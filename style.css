@@ -8,7 +8,7 @@
 /* COMMONS */
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-family: 'Lato', sans-serif;
     background: linear-gradient(to bottom, rgba(0,150,136,1) 20%,rgba(219,219,210,1) 20%);
 }
@@ -20,9 +20,9 @@ body {
     width: 80%;
     height: 820px;
     margin: 30px auto;
-    background-color: antiquewhite;
 }
 
+/* HEADER */
 header {
     display: flex;
     width: 100%;
@@ -32,37 +32,64 @@ header {
 .header-left {
     width: 35%;
     height: 100%; 
-    background-color: black;
+    background-color: #F3EEEA;
+    border-right: 0.5px solid #afb6bd;
 }
 
 .header-right {
     width: 65%;
     height: 100%;
-    background-color: brown;
+    background-color: #F3EEEA;
+    border-left: 0.5px solid #afb6bd;
 }
 
+/* SECTION */
 section {
     display: flex;
     width: 100%;
     height: 92%;
 }
 
+/* MESSAGGES */
+.banner-notifications {
+    height: 10%;
+    width: 100%;
+    background-color: #8EDAFC;
+}
+
+.search-conversation {
+    margin: 15px 0;
+}
+
+.fa-magnifying-glass {
+    color: #afb6bd;
+    border: 1px solid #d3d3d3;
+    padding: 3px 20px;
+    margin: 0 10px;
+}
+
+.search-bar {
+    width: 80%;
+    border: none;
+}
+
 .messagges {
     width: 35%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: #FAFAFA;
 }
 
+/* CONVERSATION */
 .conversation {
     display: flex;
     align-items: flex-end;
     width: 65%;
     height: 100%;
-    background-color: blueviolet;
+    background-image: url(img/mine.jpg);
 }
 
 footer {
     height: 8%;
     width: 100%;
-    background-color: azure;
+    background-color: #E6DFD6;
 }
