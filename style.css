@@ -10,7 +10,7 @@ body {
     width: 100vw;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    background: linear-gradient(to bottom, rgba(0,150,136,1) 20%,rgba(219,219,210,1) 20%);
+    background: linear-gradient(to bottom, #009688 20%,#dbdbd2 20%);
 }
 
 /* MAIN */
@@ -30,16 +30,36 @@ header {
 }
 
 .header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     width: 35%;
     height: 100%; 
-    background-color: #F3EEEA;
+    background-color: #f3eeea;
     border-right: 0.5px solid #afb6bd;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.header-left span i {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #afb6bd;
 }
 
 .header-right {
     width: 65%;
     height: 100%;
-    background-color: #F3EEEA;
+    background-color: #f3eeea;
     border-left: 0.5px solid #afb6bd;
 }
 
@@ -52,31 +72,63 @@ section {
 
 /* MESSAGGES */
 .banner-notifications {
+    display: flex;
+    align-items: center;
     height: 10%;
     width: 100%;
-    background-color: #8EDAFC;
+    background-color: #8edafc;
+    padding: 15px;
+}
+
+.banner-notifications i {
+    background-color: #f2fbff;
+    color: #8edafc;
+    padding: 12px 10px;
+    font-size: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.banner-notifications a {
+    display: block;
+    color: #b1b1b1;
 }
 
 .search-conversation {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .fa-magnifying-glass {
     color: #afb6bd;
-    border: 1px solid #d3d3d3;
-    padding: 3px 20px;
+    border: none;
+    padding: 3px 15px;
     margin: 0 10px;
 }
 
 .search-bar {
-    width: 80%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    background-color: #fafafa;
+    padding: 5px;
+}
+
+.search-bar i {
+    background-color: #fff;
+    padding: 5px 20px;
+    color: #b1b1b1;
+}
+
+.search-bar input {
+    flex-grow: 1;
     border: none;
+    padding: 5px;
 }
 
 .messagges {
     width: 35%;
     height: 100%;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
 }
 
 /* CONVERSATION */
@@ -91,5 +143,5 @@ section {
 footer {
     height: 8%;
     width: 100%;
-    background-color: #E6DFD6;
+    background-color: #e6dfd6;
 }
