@@ -61,6 +61,23 @@ header {
     height: 100%;
     background-color: #f3eeea;
     border-left: 0.5px solid #afb6bd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.header-right .fa-magnifying-glass {
+    padding: 3px 5px;
+    margin: 0 5px;
+}
+
+.fa-paperclip, .fa-ellipsis-vertical {
+    color: #afb6bd;
+    border: none;
+    padding: 3px 5px;
+    margin: 0 5px;
 }
 
 /* SECTION */
@@ -133,9 +150,12 @@ section {
 }
 
 /* CONTACTS */
+.contact {
+    display: flex;
+}
+
 .contacts {
     display: flex;
-    justify-content: end;
     width: 100%;
 }
 
@@ -145,14 +165,10 @@ section {
 
 .contacts ul li {
     display: flex;
+    justify-content: space-between;
     padding: 10px;
     width: 100%;
     border-top: 0.5px solid #afb6bd;
-}
-
-.info {
-    display: flex;
-    justify-content: space-between;
 }
 
 .contacts .name {
@@ -172,7 +188,7 @@ section {
 /* CONVERSATION */
 .conversation {
     display: flex;
-    
+    align-items: flex-end;
     width: 65%;
     height: 100%;
     background-image: url(img/mine.jpg);
@@ -180,11 +196,30 @@ section {
 
 .chat {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
+/* FOOTER */
 footer {
     height: 8%;
     width: 100%;
     background-color: #e6dfd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    border-left: 1px solid #d3d3d3;
+}
+
+footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+footer i {
+    margin: 0 20px;
 }

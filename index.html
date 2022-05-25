@@ -29,7 +29,13 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </span>
                 </div>
-                <div class="header-right"></div>
+                <div class="header-right">
+                    <div class="contact-options">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
             </header>
             <!-- messagges(L) & conversation (R) -->
             <section>
@@ -52,12 +58,16 @@
                     <div class="contacts">
                         <ul class="contacts-list">
                             <li class="contacts-item" v-for="(contact, index) in contacts">
-                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="{{contact.name}}">
+                                <div class="contact">
+                                    <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                <div class="info">
-                                    <div class="name">{{contact.name}}</div>
-                                    <div>orario</div>
+                                    <div>{{contact.name}}</div>
+                                    <div><small>{{latestMessage(index)}}</small></div>
                                </div>
-                               <div><small>{{latestMessage(index)}}</small></div>
+                                </div>
+                               <div class="hour">
+                                  <small>orario</small>
+                               </div>
                             </li>
                         </ul>
                     </div>
@@ -65,9 +75,15 @@
                 <!-- (R) -->
                 <div class="conversation">
                     <!-- chat -->
-                    <div class="chat"></div>
+                    <div class="chat">
+                        
+                    </div>
                     <!-- type messagge -->
-                    <footer></footer>
+                    <footer>
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+                    </footer>
                 </div>
             </section>
         </div>
