@@ -51,7 +51,14 @@
                     <!-- contacts -->
                     <div class="contacts">
                         <ul class="contacts-list">
-                            <li class="contacts-item" v-for="contact in contacts"><img :src="`img/avatar${contact.avatar}.jpg`" alt="{{contact.name}}"><span>{{contact.name}}</span></li>
+                            <li class="contacts-item" v-for="(contact, index) in contacts">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="{{contact.name}}">
+                               <div class="info">
+                                    <div class="name">{{contact.name}}</div>
+                                    <div>orario</div>
+                               </div>
+                               <div><small>{{latestMessage(index)}}</small></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
