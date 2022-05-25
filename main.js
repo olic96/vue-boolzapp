@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        currentIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -164,6 +165,12 @@ const app = new Vue({
                 ],
             }
         ]
+    },
+
+    methods: {
+        latestMessage(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
+        },
     },
 })
 
