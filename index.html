@@ -18,6 +18,7 @@
         <div class="container">
             <!-- header -->
             <header>
+                <!-- L -->
                 <div class="header-left">
                     <div class="profile">
                         <img src="img/avatar_io.jpg" alt="img personal profile">
@@ -29,7 +30,15 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </span>
                 </div>
+                <!-- R -->
                 <div class="header-right">
+                   <div class="contact">
+                        <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" :alt="contacts.name">
+                        <div class="info">
+                            <div>{{contacts[currentIndex].name}}</div>
+                            <div><small>Ultimo accesso oggi alle {{contacts[currentIndex].messages[2].date.substr(11, 5)}}</small></div>
+                        </div>
+                   </div>
                     <div class="contact-options">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
@@ -60,23 +69,29 @@
                             <li class="contacts-item" v-for="(contact, index) in contacts">
                                 <div class="contact">
                                     <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
-                               <div class="info">
-                                    <div>{{contact.name}}</div>
-                                    <div><small>{{latestMessage(index)}}</small></div>
-                               </div>
+                                    <div class="info">
+                                        <div>{{contact.name}}</div>
+                                        <div><small>{{latestMessage(index)}}</small></div>
+                                    </div>
                                 </div>
-                               <div class="hour">
-                                  <small>orario</small>
-                               </div>
+                                <div class="hour">
+                                    <!-- orario come lo inserisco? -->
+                                    <small>{{hourMessage(index)}}</small>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- (R) -->
-                <div class="conversation">
-                    <!-- chat -->
+                <!-- chat -->
+               <div class="conversation">
                     <div class="chat">
-                        
+                        <div class="message" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}" v-for="(message, index) in contacts[currentIndex].messages">
+                            <div>{{message.message}}</div>
+                            <small class="message-hour">
+                                {{hourMessage(index)}}
+                            </small>
+                        </div>
                     </div>
                     <!-- type messagge -->
                     <footer>

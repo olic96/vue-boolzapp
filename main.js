@@ -171,6 +171,10 @@ const app = new Vue({
         latestMessage(index) {
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
         },
+
+        hourMessage(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length-1].date.substr(11, 5);
+        },
     },
 })
 

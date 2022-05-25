@@ -56,6 +56,16 @@ header {
     color: #afb6bd;
 }
 
+.header-right img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.contact {
+    display: flex;
+}
+
 .header-right {
     width: 65%;
     height: 100%;
@@ -187,11 +197,7 @@ section {
 
 /* CONVERSATION */
 .conversation {
-    display: flex;
-    align-items: flex-end;
     width: 65%;
-    height: 100%;
-    background-image: url(img/mine.jpg);
 }
 
 .chat {
@@ -199,6 +205,35 @@ section {
     flex-direction: column;
     flex-grow: 1;
     overflow-y: auto;
+    background-image: url(img/mine.jpg);
+    width: 100%;
+    height: 92%;
+    padding: 30px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    width: 40%;
+    position: relative;
+}
+
+.message-hour {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 10px;
+    color: #dbdbd2;
+}
+
+.message-sent {
+    align-self: flex-end;
+    background-color: #d5f9ba;
+}
+
+.message-received {
+    background-color: #fff;
 }
 
 /* FOOTER */
