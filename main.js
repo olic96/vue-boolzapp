@@ -175,6 +175,10 @@ const app = new Vue({
         hourMessage(index) {
             return this.contacts[index].messages[this.contacts[index].messages.length-1].date.substr(11, 5);
         },
+
+        changeChat(index) {
+            this.currentIndex = index;
+        },
     },
 })
 
