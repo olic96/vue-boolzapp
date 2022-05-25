@@ -129,6 +129,34 @@ section {
     width: 35%;
     height: 100%;
     background-color: #fafafa;
+    overflow-y: auto;
+}
+
+/* CONTACTS */
+.contacts {
+    display: flex;
+    width: 100%;
+}
+
+.contacts ul {
+    width: 100%;
+}
+
+.contacts ul li {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 0.5px solid #afb6bd;
+}
+
+.contacts span {
+    vertical-align: top;
+}
+
+.contacts img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 /* CONVERSATION */
@@ -138,6 +166,11 @@ section {
     width: 65%;
     height: 100%;
     background-image: url(img/mine.jpg);
+}
+
+.chat {
+    display: flex;
+    flex-grow: 1;
 }
 
 footer {

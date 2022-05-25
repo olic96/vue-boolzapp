@@ -48,13 +48,17 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
-                    <!-- chat -->
-                    <div class="chat">
-                        
+                    <!-- contacts -->
+                    <div class="contacts">
+                        <ul class="contacts-list">
+                            <li class="contacts-item" v-for="contact in contacts"><img :src="`img/avatar${contact.avatar}.jpg`" alt="{{contact.name}}"><span>{{contact.name}}</span></li>
+                        </ul>
                     </div>
                 </div>
                 <!-- (R) -->
                 <div class="conversation">
+                    <!-- chat -->
+                    <div class="chat"></div>
                     <!-- type messagge -->
                     <footer></footer>
                 </div>
