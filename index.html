@@ -36,7 +36,7 @@
                         <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" :alt="contacts.name">
                         <div class="info">
                             <div>{{contacts[currentIndex].name}}</div>
-                            <div><small>Ultimo accesso oggi alle {{contacts[currentIndex].messages[2].date.substr(11, 5)}}</small></div>
+                            <div><small>Ultimo accesso oggi alle {{hourMessage(currentIndex)}}</small></div>
                         </div>
                    </div>
                     <div class="contact-options">
@@ -88,14 +88,14 @@
                         <div class="message" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}" v-for="(message, index) in contacts[currentIndex].messages">
                             <div>{{message.message}}</div>
                             <small class="message-hour">
-                                {{hourMessage(index)}}
+                                {{hourMessage(currentIndex)}}
                             </small>
                         </div>
                     </div>
                     <!-- type messagge -->
                     <footer>
                         <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage(currentIndex)" v-model:="newMessage">
                         <i class="fa-solid fa-microphone"></i>
                     </footer>
                 </div>

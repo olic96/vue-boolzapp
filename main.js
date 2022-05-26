@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         currentIndex: 0,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -179,6 +180,20 @@ const app = new Vue({
         changeChat(index) {
             this.currentIndex = index;
         },
+
+        sendNewMessage(currentIndex) {
+            if(this.newMessage !== ' ') {
+                const newMessage = {
+                    date: '',
+                    message: this.newMessage,
+                    status: 'sent',
+                };
+                this.contacts[currentIndex].messages.push(newMessage);
+                this.newMessage = '';
+            }
+        },
     },
 })
+
+// scrivo un testo che verrà salvato nell'array di oggetti messages del rispettivo contatto al premere del tasto enter. Ad ogni messaggio mi verrà restitutito dopo 1 sec un "ok"
 
