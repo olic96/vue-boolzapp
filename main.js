@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         currentIndex: 0,
         newMessage: '',
+        search: '',
         contacts: [
             {
                 name: 'Michele',
@@ -206,6 +207,24 @@ const app = new Vue({
                 }
                 this.contacts[currentIndex].messages.push(cpuMessage);
             }, 1000);
-        },    
+        },  
+        
+        research() {
+            this.search = this.search.toLowerCase();
+            this.contacts.forEach(contact => {
+                if(this.search !== ' ' && !contact.name.toLowerCase().includes(this.search)) {
+                    contact.visible = false;
+                } else if (this.search !== null) {
+                    contact.visible = true;
+                }
+            });
+        }
     },
-})
+
+    computed: {
+        filterSearch() {
+            this.research();
+            return this.contacts.filter(contact => contact.visible === true)
+        }
+    },
+})    
