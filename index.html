@@ -68,7 +68,7 @@
                     <!-- contacts -->
                     <div class="contacts">
                         <ul class="contacts-list">
-                            <li class="contacts-item" v-for="(contact, index) in filterSearch" @click="changeChat(index)">
+                            <li class="contacts-item" v-for="(contact, index) in filterSearch" @click="changeChat(contact)">
                                 <div class="contact">
                                     <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     <div class="info">

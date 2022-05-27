@@ -1,4 +1,4 @@
-var DateTime = luxon.DateTime;
+const DateTime = luxon.DateTime;
 
 const app = new Vue({
     el: '#app',
@@ -184,8 +184,8 @@ const app = new Vue({
             return this.contacts[this.currentIndex].messages[index].date.substr(11, 5);
         },
 
-        changeChat(index) {
-            this.currentIndex = index;
+        changeChat(contact) {
+            this.currentIndex = this.contacts.indexOf(contact);
         },
 
         sendNewMessage(currentIndex) {
