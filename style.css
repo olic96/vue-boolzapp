@@ -8,7 +8,7 @@
 /* COMMONS */
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     font-family: 'Lato', sans-serif;
     background: linear-gradient(to bottom, #009688 20%,#dbdbd2 20%);
 }
@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    height: 820px;
+    height: 100%;
     margin: 30px auto;
 }
 
@@ -34,8 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    width: 35%;
-    height: 100%; 
+    width: 35%; 
     background-color: #f3eeea;
     border-right: 0.5px solid #afb6bd;
 }
@@ -179,6 +178,10 @@ section {
     padding: 10px;
     width: 100%;
     border-top: 0.5px solid #afb6bd;
+}
+
+.contacts ul li:hover {
+    background-color: #b1b1b1;
 }
 
 .contacts .name {
